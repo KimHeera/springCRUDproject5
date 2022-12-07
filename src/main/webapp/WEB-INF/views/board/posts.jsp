@@ -47,9 +47,10 @@
         <th>Type</th>
         <th>ClassTime</th>
         <th>Category</th>
+        <th>english</th>
+
         <th>Edit</th>
         <th>Delete</th>
-        <th>english</th>
     </tr>
     <c:forEach items="${posts}" var="u">
         <tr>

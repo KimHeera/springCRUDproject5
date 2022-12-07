@@ -1,55 +1,70 @@
+
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: kimheera
-  Date: 2022/12/02
-  Time: 5:55 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page contentType="text/html;charset=UTF-8" isELIgnored="false" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <title>수정</title>
+    <style>
+        #edit {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+        #edit td, #edit th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align:center;
+        }
+        #edit tr:nth-child(even){background-color: #f2f2f2;}
+        #edit tr:hover {background-color: #ddd;}
+        #edit th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #006bb3;
+            color: white;
+        }
+    </style>
+    <title>수업 정보 수정</title>
 </head>
 <body>
-<form:form modelAttribute="boardVO" method="POST" action="../editok">
+<h1>수업 정보 수정</h1>
+<form:form modelAttribute="boardVO" method = "POST" action= "../editok">
     <form:hidden path="seq"/>
     <table id="edit">
         <tr>
-            <td>수업이름</td>
-            <td><form:input path="titleName"/></td>
+            <td>Course Title</td>
+            <td><form:input path = "titleName" /></td>
         </tr>
         <tr>
-            <td>교수님</td>
-            <td><form:input path="professor"/></td>
+            <td>Professor</td>
+            <td><form:input path = "professor" /></td>
         </tr>
         <tr>
-            <td>분반</td>
-            <td><form:input path="section"/></td>
+            <td>Section</td>
+            <td><form:input path = "section" /></td>
         </tr>
         <tr>
-            <td>학점</td>
-            <td><form:input path="credits"/></td>
+            <td>Credits</td>
+            <td><form:input path = "credits" /></td>
         </tr>
         <tr>
-            <td>유형</td>
-            <td><form:input path="type"/></td>
+            <td>Type</td>
+            <td><form:input path = "type" /></td>
         </tr>
         <tr>
-            <td>수업시간</td>
-            <td><form:input path="classTime"/></td>
+            <td>ClassTime</td>
+            <td><form:input path = "classTime" /></td>
         </tr>
         <tr>
-            <td>이수구분</td>
-            <td><form:input path="category"/></td>
+            <td>Category</td>
+            <td><form:input path = "category" /></td>
         </tr>
         <tr>
-            <td>영어비율</td>
-            <td><form:input path="english"/></td>
+            <td>Eng. Rate</td>
+            <td><form:input path = "english" /></td>
         </tr>
     </table>
-    <input type="submit" value="수정하기"/>
-    <input type="button" value="취소하기" onclick="history.back()"/>
+    <input type="submit" value="수정" />
+    <input type="button" value="취소" onclick="history.back()"/>
 </form:form>
 </body>
 </html>

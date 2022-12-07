@@ -52,7 +52,7 @@ public class BoardDAO {
 
     public BoardVO getClassList(int seq) {
 //        return template.queryForObject(CLASSLIST_GET, new Object[] {seq}, new BeanPropertyRowMapper<BoardVO>(BoardVO.class));
-        BoardVO one = sqlSession.selectOne("ClassList.deleteClassList", seq);
+        BoardVO one = sqlSession.selectOne("ClassList.getClassList", seq);
         return one;
     }
 
